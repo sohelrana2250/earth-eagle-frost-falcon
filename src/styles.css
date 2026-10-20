@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-pending: var(--pending);
+  --color-pending-foreground: var(--pending-foreground);
+  --color-approved: var(--approved);
+  --color-approved-foreground: var(--approved-foreground);
+  --color-rejected: var(--rejected);
+  --color-rejected-foreground: var(--rejected-foreground);
+  --radius-control: 0.625rem;
+  --radius-menu: 1rem;
+  --radius-panel: 1.625rem;
+}
+
+:root {
+  --background: #f4f2ec;
+  --foreground: #1c2424;
+  --card: #fbfaf7;
+  --card-foreground: #1c2424;
+  --primary: #1c2424;
+  --primary-foreground: #f7f5f0;
+  --secondary: #ece8e0;
+  --secondary-foreground: #1c2424;
+  --muted: #efece5;
+  --muted-foreground: #5c5852;
+  --accent: #e4eeec;
+  --accent-foreground: #1e3a38;
+  --destructive: #8a3d34;
+  --destructive-foreground: #fbf6f4;
+  --border: #e2ddd3;
+  --input: #e2ddd3;
+  --ring: #2f4f4d;
+  --pending: #f3ecdc;
+  --pending-foreground: #6d5424;
+  --approved: #e5f0e8;
+  --approved-foreground: #24543a;
+  --rejected: #f6e8e5;
+  --rejected-foreground: #7a332c;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
